@@ -3,11 +3,11 @@ import { useSelector } from '../../services/store';
 import { Navigate, useLocation } from 'react-router-dom';
 import { Preloader } from '@ui';
 
-type ProtectedRouteProps = {
+type OnlyUnauthRouteProps = {
   children: ReactElement;
 };
 
-export const ProtectedRoute: FC<ProtectedRouteProps> = ({ children }) => {
+export const OnlyUnauthRoute: FC<OnlyUnauthRouteProps> = ({ children }) => {
   const location = useLocation();
   const { isAuthenticated, isAuthChecked } = useSelector((state) => state.user);
 
@@ -15,8 +15,9 @@ export const ProtectedRoute: FC<ProtectedRouteProps> = ({ children }) => {
     return <Preloader />;
   }
 
-  if (!isAuthenticated) {
-    return <Navigate replace to='/login' state={{ from: location }} />;
+  if (isAuthenticated) {
+    const { from } = location.state || { from: { pathname: '/' } };
+    return <Navigate replace to={from} />;
   }
 
   return children;

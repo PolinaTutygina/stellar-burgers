@@ -7,6 +7,3 @@ export * from './profile';
 export * from './profile-orders';
 export * from './register';
 export * from './reset-password';
-export { ConstructorPage } from './constructor-page/constructor-page';
-export { Feed } from './feed/feed';
-export { NotFound404 } from './not-fount-404/not-fount-404';
