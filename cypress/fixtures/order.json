@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "name": "Тестовый бургер",
+  "order": {
+    "_id": "683dff7cc2f30c001cb297d8",
+    "ingredients": [
+      "643d69a5c3f7b9001cfa093c",
+      "643d69a5c3f7b9001cfa0942",
+      "643d69a5c3f7b9001cfa0941"
+    ],
+    "status": "done",
+    "name": "Краторный space био-марсианский бургер",
+    "owner": {
+        "name": "TestUser",
+        "email": "test-user@example.com",
+        "createdAt": "2025-01-01T00:00:00.000Z",
+        "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    "price": 3014,
+    "createdAt": "2025-07-04T06:11:15.039Z",
+    "updatedAt": "2025-07-04T06:11:15.773Z",
+    "number": 83540,
+    "__v": 0
+  }
+}
